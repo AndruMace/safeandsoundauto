@@ -1,4 +1,3 @@
-console.log("Test1")
 document.querySelectorAll('.service-item').forEach(item => {
   console.log("Test2")
   let currentIndex = 0;
