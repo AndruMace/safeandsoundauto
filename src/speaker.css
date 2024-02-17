@@ -1,0 +1,102 @@
+@media (max-width: 1150px) {
+  .speaker-wrapper {
+    display: none;
+  }
+}
+
+.speaker-wrapper {
+  width: 200px;
+  aspect-ratio: 1/1;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  clip-path: circle(50%);
+  box-shadow: 0 0 10px #000000;
+}
+
+.speaker-left {
+  z-index: 0;
+
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+
+.speaker-right {
+  z-index: 0;
+
+  position: absolute;
+  top: 30%;
+  left: 80%;
+}
+
+.speaker {
+  z-index: 0;
+
+  position: absolute;
+  aspect-ratio: 1/1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+}
+
+.speaker.inside {
+  z-index: 0;
+
+  width: 38%;
+  background-image: url(https://zmotrin.github.io/assets/speaker/speaker-3.webp);
+  filter: blur(0.1vmin);
+  animation-name: inside;
+  animation-duration: 400ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.speaker.center {
+  z-index: 0;
+
+  width: 76%;
+  background-image: url(https://zmotrin.github.io/assets/speaker/speaker-2.webp);
+  filter: blur(0.9vmin);
+  animation-name: center;
+  animation-duration: 400ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.speaker.border {
+  width: 100%;
+  background-image: url(https://zmotrin.github.io/assets/speaker/speaker-1.webp);
+  /* filter: blur(0.1vmin);
+  animation-name: border;
+  animation-duration: 100ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; */
+}
+
+@keyframes inside {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes center {
+  0% {
+    transform: translate(-51%, -49%);
+  }
+  100% {
+    transform: translate(-49%, -51%);
+  }
+}
+
+@keyframes border {
+  0% {
+    transform: translate(-50.2%, -49.8%);
+  }
+  100% {
+    transform: translate(-49.8%, -50.2%);
+  }
+}
