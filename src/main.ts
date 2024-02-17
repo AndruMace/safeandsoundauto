@@ -5,18 +5,18 @@ document.querySelectorAll('.service-item').forEach(item => {
   const images = item.querySelectorAll('.carousel-image');
   const nextButton = item.querySelector('.next');
   const prevButton = item.querySelector('.prev');
-  function showImage(index) {
+  function showImage(index: number) {
     images.forEach(img => img.classList.remove('active'));
     images[index].classList.add('active');
   }
 
-  nextButton.addEventListener('click', () => {
+  nextButton?.addEventListener('click', () => {
     console.log('next')
     currentIndex = (currentIndex + 1) % images.length;
     showImage(currentIndex);
   });
 
-  prevButton.addEventListener('click', () => {
+  prevButton?.addEventListener('click', () => {
     console.log('[rev]')
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     showImage(currentIndex);
